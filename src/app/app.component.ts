@@ -96,7 +96,7 @@ scrollToBottom() {
 
       formData.append('image', file);
       this.chatHistory.push({ message: 'Loading...', isUser: false, codeSnippet: '', isLoading: true });
-      this.http.post('http://localhost:8000/api/checkImage', formData).subscribe({
+      this.http.post('https://techbot-ai-backend.vercel/api/checkImage', formData).subscribe({
         next: (response: any) => {
           //... handle the response from the backend
           console.log(response, 'file uploaded');
@@ -116,7 +116,7 @@ scrollToBottom() {
 
       formData.append('video', file);
       this.chatHistory.push({ message: 'Loading...', isUser: false, codeSnippet: '', isLoading: true });
-      this.http.post('http://localhost:8000/api/videoTOText', formData).subscribe({
+      this.http.post('https://techbot-ai-backend.vercel/api/videoTOText', formData).subscribe({
         next: (response: any) => {
           //... handle the response from the backend
           console.log(response, 'file uploaded');
