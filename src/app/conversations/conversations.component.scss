@@ -1,0 +1,15 @@
+ul {
+    padding: 5px;
+    margin: 0px;
+    position: absolute;
+    inset: 0 0 0 0;
+    li {
+        list-style-type: none;
+        padding: 25px;
+        cursor: pointer;
+        box-shadow: rgb(130 176 186) 0px 1px 4px;
+        &:hover {
+            box-shadow: rgb(130 176 186) 0px 2px 20px 0px;
+        }
+    }
+}
