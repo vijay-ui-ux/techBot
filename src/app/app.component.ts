@@ -61,7 +61,7 @@ scrollToBottom() {
       
       this.chatHistory.push({ message: 'Loading...', isUser: false, codeSnippet: '', isLoading: true });
       this.scrollToBottom();
-      this.http.post<any>('http://127.0.0.1:8000/api/chat', { message }).subscribe({
+      this.http.post<any>('https://techbot-ai-backend.vercel.app/api/chat', { message }).subscribe({
         next: (data) => {
           this.chatHistory[this.chatHistory.length - 1] = { message: data.response, isUser: false, codeSnippet: data.code_snippet, isLoading: false };
           this.scrollToBottom();
